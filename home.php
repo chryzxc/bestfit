@@ -27,15 +27,20 @@
         function loadresult1(){
         global $mydb; 
         $cur = $mydb->loadResultList1();
+
+        $arrayStrands=array();
+        $arraySubjects=array();
+        $arrayCounts=array();
   
         foreach ($cur as $result) {
-          
+          array_push($arrayStrands,$result->COURSE_NAME);
+          array_push($arraySubjects,$result->COURSE_DESC);
+          array_push($arrayCounts,0);
       
-          echo "<script>console.log('" . json_encode($result->COURSE_NAME) . "');</script>";
-  
+
         } 
+        echo "<script>console.log('" . json_encode($arraySubjects[1]) . "');</script>";
         
-    
 
 
       } 
