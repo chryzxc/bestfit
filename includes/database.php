@@ -96,6 +96,21 @@ class Database {
 		return $array;
 	}
 
+	function loadResultList3( $key='' ) {
+		$cur = $this->executeQuery();
+		
+		$array = array();
+		while ($row = mysqli_fetch_object( $cur )) {
+			if ($key) {
+				$array[$row->$key] = $row;
+			} else {
+				$array[] = $row;
+			}
+		}
+		mysqli_free_result( $cur );
+		return $array;
+	}
+
 
 
 	function loadSingleResult() {

@@ -20,7 +20,7 @@
 				  	<?php
 				  	
 				  	  	$mydb->setQuery("SELECT  `IDNO` ,UPPER(CONCAT(  `LNAME` ,  ', ',  `FNAME` ,  ' ',  `MNAME` )) AS  'Name',
-				  						  `COURSE_ONE` ,`COURSE_TWO`, `COURSE_THREE` ,  `STATUS` ,  `EMAIL`
+				  						  `COURSE_ONE` ,`COURSE_TWO`, `COURSE_THREE` ,  `STATUS` ,  `EMAIL` , `attachment_file`
 				  						  FROM  `tblstudent`");
 				  	  	loadresult();
 
@@ -38,7 +38,18 @@
 					  		echo '<td  align="center">'. $student->COURSE_TWO.'</td>';
 					  		echo '<td  align="center">'. $student->COURSE_THREE.'</td>';
 					  		echo '<td>'. $student->EMAIL.'</td>';
-					  		echo '<td><a href = "index.php?view=view&studentId='.$student->IDNO.'" ><span class="glyphicon glyphicon-list-alt"> </span>  View</a></td>';
+							$imagepath = base64_encode($student->attachment_file);
+							echo "<script>console.log('" . json_encode($imagepath) . "');</script>";
+ 
+						
+							  echo '<div>
+							  <td><a href = "index.php?view=view&studentId='.$student->IDNO.'" ><span class="glyphicon glyphicon-list-alt"> </span>  Grades</a></td>
+							  <td><a href = "viewimage.php?pic='.$imagepath.'" ><span class="glyphicon glyphicon-list-alt"> </span>  Image</a></td>
+							  </div>';
+							 echo  '<img src="data:attachment_file/jpg;charset=utf8;base64,'.$imagepath.'/> ';
+							
+					  	//	echo '<td><a href = "index.php?view=view&studentId='.$student->IDNO.'" ><span class="glyphicon glyphicon-list-alt"> </span>  View</a></td>';
+						//	  echo '<td><a href = "index.php?view=view&studentId='.$student->IDNO.'" ><span class="glyphicon glyphicon-list-alt"> </span>  Image</a></td>';
 					  		echo '</tr>';
 					  		}
 

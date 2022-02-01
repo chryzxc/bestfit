@@ -26,7 +26,7 @@
   
         function loadresult1(){
         global $mydb; 
-        $cur = $mydb->loadResultList1();
+        $cur = $mydb->loadResultList3();
 
         $arrayStrands=array();
         $arraySubjects=array();
@@ -39,7 +39,24 @@
       
 
         } 
-        echo "<script>console.log('" . json_encode($arraySubjects[1]) . "');</script>";
+    //    echo "<script>console.log('" . json_encode($arraySubjects) . "');</script>";
+
+        
+        $mydb->setQuery("SELECT * 
+        FROM  `grades` ORDER BY AVE DESC");
+         global $mydb; 
+         $cur = $mydb->loadResultList3();
+ 
+         $arrayGrades=array();
+     
+         foreach ($cur as $result) {
+           array_push($arrayGrades,$result->AVE);
+         
+
+ 
+         } 
+         echo "<script>console.log('" . json_encode($arrayGrades) . "');</script>";
+ 
         
 
 
