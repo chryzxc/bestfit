@@ -31,6 +31,8 @@ class Database {
 	function setQuery($sql='') {
 		$this->sql_string=$sql;
 	}
+
+	
 	
 	function executeQuery() {
 		$result = mysqli_query($this->conn,$this->sql_string);
