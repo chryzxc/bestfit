@@ -54,24 +54,98 @@
 
 
 				<?php
-				$details = new Student_details();
-				$det = $details->secondary_details($_SESSION['IDNO']);
+					$details = new Student_details();
+					$det = $details->secondary_details($_SESSION['IDNO']);
+
+					$cur = $student->single_student($_SESSION['IDNO']);
+
+
+					$mydb->setQuery("SELECT * 
+						  FROM  `courseforshs` c,  `department` d
+						  WHERE c.`DEPT_ID` = d.`DEPT_ID` ORDER BY COURSE_NAME, COURSE_LEVEL desc limit 6");
+loadresult1();
+
+function loadresult1()
+  {
+    global $mydb;
+    $cur = $mydb->loadResultList3();
+
+    $arrayStrands = array();
+    $arraySubjects = array();
+  
+    foreach ($cur as $result) {
+      array_push($arrayStrands, $result->COURSE_NAME);
+      array_push($arraySubjects, $result->COURSE_DESC);
+    
+    }
+
+    $mydb->setQuery("SELECT * 
+        FROM  `grades` WHERE idno=".$_SESSION['IDNO'] ." ORDER BY AVE DESC limit 3");
+    global $mydb;
+    $cur = $mydb->loadResultList3();
+
+    $arrayGradesId = array();
+    $arrayGrades = array();
+    $arrayRecommendation = array();
+
+    foreach ($cur as $result) {
+
+      $mydb->setQuery("SELECT * 
+      FROM  `subject` WHERE subj_id=".$result->SUBJ_ID ."");
+      global $mydb;
+      $newCur = $mydb->loadResultList3();
+
+      array_push($arrayGradesId, $result->SUBJ_ID);
+      array_push($arrayGrades, $result->AVE);
+
+      foreach ($newCur as $result1) {
+
+     
+        for($x = 0; $x < count($arrayStrands) ; $x ++){
+
+          if(strpos($arraySubjects[$x], $result1->SUBJ_DESCRIPTION) !== false){
+          
+            array_push($arrayRecommendation,$arrayStrands[$x]);
+         
+          
+        } 
+
+        }
+
+  }
+  
+
+    }
+
+	echo ' <fieldset>';
+	echo '<legend><b>Recommended courses</b></legend>';
+	echo '<table class="table table-bordered" cellspacing="0" width="100%">';
+	echo '<tbody>	';
+		 
+   
+   
+   
+   
+	echo ' <tr><td> 1st Course  :</td><td>'.((count($arrayRecommendation) >= 1)? $arrayRecommendation[0] :"None").'</td></tr>';
+	echo ' <tr><td> 2nd Course  :</td><td>'.((count($arrayRecommendation) >= 2)? $arrayRecommendation[1] :"None").'</td></tr>';
+	echo ' <tr><td> 3rd Course  :</td><td>'.((count($arrayRecommendation) == 3)? $arrayRecommendation[2] :"None").'</td></tr>';
+	echo ' </tbody>	';
+	echo ' </table>';
+	  
+   
+   
+	echo '</fieldset>	';
+   
+   
+   
+			   
+    
+  
+  }
+
+			
 				?>
-				 <fieldset>
-						<legend><b>Courses Offered</b></legend>
-						<table class="table table-bordered" cellspacing="0" width="100%">
-						<tbody>	
-						<tr><td>Offered 1st Course  :</td><td><?php echo $cur->COURSE_ONE; ?></td></tr>
-						<tr><td>Offered 2nd Course  :</td><td><?php echo $cur->COURSE_TWO; ?></td></tr>
-						<tr><td>Offered 3rd Course  :</td><td><?php echo $cur->COURSE_THREE; ?></td></tr>
-						</tbody>	
-						</table>
-						 
-
-
-				</fieldset>	
-
-
+			
 	 <fieldset>
 						<legend><b>Secondary details</b></legend>
 						<table class="table table-bordered" cellspacing="0" width="100%">

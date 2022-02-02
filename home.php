@@ -13,7 +13,7 @@
   </div>
 
   <?php
-
+  
   $student = new Student();
   $cur = $student->single_student($_SESSION['IDNO']);
 
@@ -31,27 +31,91 @@
 
     $arrayStrands = array();
     $arraySubjects = array();
-    $arrayCounts = array();
-
+  
     foreach ($cur as $result) {
       array_push($arrayStrands, $result->COURSE_NAME);
       array_push($arraySubjects, $result->COURSE_DESC);
-      array_push($arrayCounts, 0);
+    
     }
-    //    echo "<script>console.log('" . json_encode($arraySubjects) . "');</script>";
-
 
     $mydb->setQuery("SELECT * 
-        FROM  `grades` ORDER BY AVE DESC");
+        FROM  `grades` WHERE idno=".$_SESSION['IDNO'] ." ORDER BY AVE DESC limit 3");
     global $mydb;
     $cur = $mydb->loadResultList3();
 
+    $arrayGradesId = array();
     $arrayGrades = array();
+    $arrayRecommendation = array();
 
     foreach ($cur as $result) {
+
+      $mydb->setQuery("SELECT * 
+      FROM  `subject` WHERE subj_id=".$result->SUBJ_ID ."");
+      global $mydb;
+      $newCur = $mydb->loadResultList3();
+
+      array_push($arrayGradesId, $result->SUBJ_ID);
       array_push($arrayGrades, $result->AVE);
+
+      foreach ($newCur as $result1) {
+
+     
+        for($x = 0; $x < count($arrayStrands) ; $x ++){
+
+          if(strpos($arraySubjects[$x], $result1->SUBJ_DESCRIPTION) !== false){
+          
+            array_push($arrayRecommendation,$arrayStrands[$x]);
+         
+          
+        } 
+
+        }
+
+  }
+  
+
     }
+    echo "<script>console.log('" . json_encode($arrayGradesId) . "');</script>";
     echo "<script>console.log('" . json_encode($arrayGrades) . "');</script>";
+    echo "<script>console.log('" . json_encode($arrayStrands) . "');</script>";
+    echo "<script>console.log('" . json_encode($arraySubjects) . "');</script>";
+    echo "<script>console.log('" . json_encode($arrayRecommendation) . "');</script>";
+
+
+   echo ' <div class="site-section">';
+   echo '  <div class="container">';
+   echo '   <div class="row">';
+   echo '     <div class="col-md-5 pr-md-5 mr-auto">';
+   echo '       <!--            <h2 class="line-bottom">Logged In</h2> -->';
+   echo '       <h2 class="line-bottom"><b>'.$_SESSION['FNAME'].'</b><b> '.$_SESSION['LNAME'].'</h2></b>';
+   echo '       <p>This page shows recommended strand for the students to choose from.</p>';
+   echo '     </div>';
+   echo '     <div class="col-md-6">';
+   echo '       <div class="quick-contact-form bg-white">';
+   echo '         <h4><b>Student Login Information</b></h4>';
+   echo '         <hr />';
+
+
+   echo '         <label>You will see here the course that will fit you!</label><br>';
+   echo '         <h2 style="margin-bottom: 0px;">1st Course: <h3 style="color: red; padding: 0px 0; margin-top: 0px; margin-bottom: 20px">'.((count($arrayRecommendation) >= 1)? $arrayRecommendation[0] :"None").'</h3></h2>';
+
+   echo '        <h2 style="margin-bottom: 0px;">2nd Course: <h3 style="color: red; padding: 0px 0; margin-top: 0px; margin-bottom: 20px">'.((count($arrayRecommendation) >= 2)? $arrayRecommendation[1] :"None").'</h3></h2>';
+
+   echo '          <h2 style="margin-bottom: 0px;">3rd Course: <h3 style="color: red; padding: 0px 0; margin-top: 0px; margin-bottom: 20px">'.((count($arrayRecommendation) == 3)? $arrayRecommendation[2] :"None").'</h3></h2>';
+
+
+   echo '          <hr />';
+
+
+   echo '          <div class="form-group">';
+   echo '           <a href="logout.php" class="btn btn-primary px-5">Logout <span class="fa fa-log-out"></span></a>';
+   echo '         </div>';
+   echo '       </div>';
+   echo '     </div>';
+   echo '    </div>';
+   echo '  </div>';
+   echo ' </div>';
+  
   }
 
 
@@ -59,45 +123,3 @@
 
   ?>
 
-  <div class="site-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5 pr-md-5 mr-auto">
-          <!--            <h2 class="line-bottom">Logged In</h2> -->
-          <h2 class="line-bottom"><b><?Php echo $_SESSION['FNAME']; ?></b><b> <?Php echo $_SESSION['LNAME']; ?></h2></b>
-          <p>This page shows recommended strand for the students to choose from.</p>
-        </div>
-        <div class="col-md-6">
-          <div class="quick-contact-form bg-white">
-            <h4><b>Student Login Information</b></h4>
-            <hr />
-
-
-
-
-            <label>You will see here the course that will fit you!</label><br>
-            <h2>Offered 1st Course: Technology</h2>
-
-            <h2>Offered 2nd Course: <?php echo $cur->COURSE_TWO; ?></h2>
-            <h2>Offered 3rd Course: <?php echo $cur->COURSE_THREE; ?></h2>
-
-            <hr />
-
-
-
-
-
-
-
-
-
-
-
-            <div class="form-group">
-              <a href="logout.php" class="btn btn-primary px-5">Logout <span class="fa fa-log-out"></span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>

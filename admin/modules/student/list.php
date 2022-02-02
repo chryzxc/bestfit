@@ -13,8 +13,8 @@
 				  	<!--	<th>2nd Course</th>-->
 				  	<!--	<th>3rd Course</th> -->
 				  		<th>Email Address</th>
-						  <th>Details</th>
-				  		<th>Photo</th>
+						  <th>Grades</th>
+				  		<th>Attached File</th>
 				  	</tr>	
 				  </thead>
 				  <tbody>
@@ -46,8 +46,8 @@
  
 					//	<td><a href = "viewimage.php?pic='.$imagepath.'" target="_blank" ><span class="glyphicon glyphicon-list-alt"> </span>  Image</a></td>
 							  echo '<div>
-							  <td><a href = "index.php?view=view&studentId='.$student->IDNO.'" ><span class="glyphicon glyphicon-list-alt"> </span>  Grades</a></td>
-							  <td><a href = "viewimage.php?id='.$student->IDNO.'" target="_blank" ><span class="glyphicon glyphicon-list-alt"> </span>  Image</a></td>
+							  <td><a href = "index.php?view=view&studentId='.$student->IDNO.'" ><span class="glyphicon glyphicon-list-alt"> </span>  View records</a></td>
+							  <td><a href = "viewimage.php?id='.$student->IDNO.'" target="_blank" ><span class="glyphicon glyphicon-list-alt"> </span>  View photo</a></td>
 							  </div>';
 						//	 echo  '<img src="data:image/jpg;charset=utf8;base64,'.$imagepath.'"/> ';
 						//	 <img src="data:image/jpeg;base64,'.base64_encode($row['name'] ).'" height="200" width="200" class="img-thumnail" />  
