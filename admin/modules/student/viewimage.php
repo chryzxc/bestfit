@@ -1,5 +1,5 @@
 <div>
-  <img src="<?php echo urldecode($_GET['pic']); ?>" alt="" />
-  
-  
+  <img src="<?php echo urldecode($_POST['pic']); ?>" />
+
+
 </div>
