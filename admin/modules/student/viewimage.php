@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 
@@ -32,3 +33,10 @@ $conn->close();
     <img src="data:image/jpg;charset=utf8;base64,<?php echo $imagepath ?>" text-align="center" />
   </span>
 </body>
+=======
+<div>
+  <img src="<?php echo urldecode($_POST['pic']); ?>" />
+
+
+</div>
+>>>>>>> f06061c57163a0e026c0fe0b5e74831e11bfd997
