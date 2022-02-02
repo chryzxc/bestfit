@@ -117,11 +117,6 @@ function doInsert()
 	$tempname = $_FILES["personImage"]["tmp_name"];
 	$folder = "image/" . $filename;
 
-/* 	if (move_uploaded_file($tempname, $folder))  {
-		$msg = "Image uploaded successfully";
-	}else{
-		$msg = "Failed to upload image";
-  } */
 
 
   if(!empty($_FILES["personImage"]["name"])) { 
@@ -147,11 +142,6 @@ function doInsert()
 
 
 
-//	$filename = UploadImage();
-	//$personImage = "files/" . $filename;
-
-	//echo "<script>console.log('" . json_encode($filename) . "');</script>";
-//	echo "<script>console.log('" . json_encode($_FILES["personImage"]["name"]) . "');</script>";
 
 
 
@@ -511,27 +501,3 @@ function doDelsubj()
 	}
 }
 
-
-function UploadImage()
-{
-	$target_dir = "files/";
-	$target_file = $target_dir  . basename($_FILES["personImage"]["name"]);
-	$uploadOk = 1;
-	$imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
-
-
-	if (
-		$imageFileType != "jpg" || $imageFileType != "png" || $imageFileType != "jpeg"
-		|| $imageFileType != "gif" || $imageFileType != "docs" || $imageFileType != "mp4"
-	) {
-		if (move_uploaded_file($_FILES["personImage"]["tmp_name"], $target_file)) {
-			return   basename($_FILES["personImage"]["name"]);
-		} else {
-			//   echo "Error Uploading File";
-			//   exit;
-		}
-	} else {
-		//   echo "File Not Supported";
-		//   exit;
-	}
-}
