@@ -169,7 +169,7 @@
 
     <div class="container" style="margin-top: 10px">
         <caption>
-            <h2 class="line-bottom"><b>Student Assesment</b></h2>
+            <h2 class="line-bottom"><b>Student Evaluation</b></h2>
 
         </caption>
         <!--  <form> -->
@@ -520,7 +520,7 @@
 
             <!-- Modal content -->
             <div class="modal-content" style="width: 50%">
-                <span class="close">&times;</span>
+                <span class="close" style="text-align: right;">&times;</span>
 
                 <h4 class="line-bottom" style="margin-top: 20px;"><b>Result</b></h4>
                 <p id="result" style="margin-top: 5px; text-align:center; margin-bottom:30px;">You are fit</p>
@@ -601,7 +601,7 @@
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
                 if (event.target == modal) {
-                    modal.style.display = "none";
+                   // modal.style.display = "none";
                 }
             }
         </script>
