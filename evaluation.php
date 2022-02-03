@@ -19,6 +19,7 @@
     button {
         border-radius: 20px;
         background-color: #fb7400;
+        color: white;
 
 
         text-decoration: none;
@@ -513,7 +514,7 @@
         </label>
 
         <!-- Trigger/Open The Modal -->
-        <button type="button" id="submitButton">Submit</button>
+        <button type="button" id="submitButton" style="border-radius: 5px; margin:4px;">Submit</button>
 
         <div id="myModal" class="modal">
 
@@ -521,8 +522,12 @@
             <div class="modal-content" style="width: 50%">
                 <span class="close">&times;</span>
 
-                <h2 class="line-bottom"><b>Result</b></h2>
-                <p id="result" style="margin-top: 5px; text-align:center">You are fit</p>
+                <h4 class="line-bottom" style="margin-top: 20px;"><b>Result</b></h4>
+                <p id="result" style="margin-top: 5px; text-align:center; margin-bottom:30px;">You are fit</p>
+                <div style="text-align: center">
+                    <a href="index.php" class="btn btn-primary px-5" style="padding-top: 15px; width:30% margin-top:20px">Okay<span class="fa fa-log-out"></span></a>
+                </div>
+
             </div>
 
         </div>
@@ -537,6 +542,18 @@
         <!--  </form> -->
 
         <script>
+            $(document).ready(function() {
+                $("button").click(function() {
+                    //var favorite = [];
+
+                    //  alert("Science: " + science);
+
+
+                    //   alert("My favourite sports are: " + favorite.join(", "));
+
+                });
+            });
+
             // Get the modal
             var modal = document.getElementById("myModal");
 
@@ -548,12 +565,33 @@
 
             // When the user clicks the button, open the modal 
             btn.onclick = function() {
-            
                 modal.style.display = "block";
-                document.getElementById("result").textContent = 'Hello World';
+
+                var languages = 0;
+                var literature = 0;
+                var communication = 0;
+                var mathematics = 0;
+                var philosopy = 0;
+                var naturalsciences = 0;
+                var socialsciences = 0;
+
+                $.each($("input[name='q1']:checked"), function() {
+                    //    favorite.push($(this).val());
+                    if ($(this).val() == "naturalsciences") {
+                        socialsciences += 1;
+                    }
+                    document.getElementById("result").textContent = "qwe" + socialsciences;
+
+                });
+
+
+
+
+
+
             }
 
-          
+
 
             // When the user clicks on <span> (x), close the modal
             span.onclick = function() {
@@ -566,30 +604,6 @@
                     modal.style.display = "none";
                 }
             }
-
-
-            $(document).ready(function() {
-                $("button").click(function() {
-                    //var favorite = [];
-                    var languages = 0;
-                    var literature = 0;
-                    var communication = 0;
-                    var mathematics = 0;
-                    var philosopy = 0;
-                    var naturalsciences = 0;
-                    var socialsciences = 0;
-
-                    $.each($("input[name='q1']:checked"), function() {
-                        //    favorite.push($(this).val());
-                        if ($(this).val() == "Science") {
-                            science += 1;
-                        }
-
-                    });
-                    alert("Science: " + science);
-                    //   alert("My favourite sports are: " + favorite.join(", "));
-                });
-            });
         </script>
 
     </div>
