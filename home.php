@@ -96,7 +96,8 @@
     echo '         <hr />';
 
 
-    echo '         <label>You will see here the course that will fit you!</label><br>';
+    echo '         <h5 style="margin-bottom: 0px;">You will see here the course that will fit you!</h5>';
+    echo '         <p style="padding: 0px 0; margin-top: 0px;">(Suggested based on your grades)</p>';
     echo '         <h2 style="margin-bottom: 0px;">1st Course: <h3 style="color: red; padding: 0px 0; margin-top: 0px; margin-bottom: 20px">' . ((count($arrayRecommendation) >= 1) ? $arrayRecommendation[0] : "None") . '</h3></h2>';
 
     echo '        <h2 style="margin-bottom: 0px;">2nd Course: <h3 style="color: red; padding: 0px 0; margin-top: 0px; margin-bottom: 20px">' . ((count($arrayRecommendation) >= 2) ? $arrayRecommendation[1] : "None") . '</h3></h2>';
@@ -106,7 +107,7 @@
 
     echo '          <hr />';
 
-    echo '<p>Not sure on your course? Take an assessment now.</p> ';
+    echo '<p>Not sure on your course? Take an evaluation test now.</p> ';
     echo '    <a href="evaluation.php" class="btn btn-primary px-5">Take assessment <span class="fa fa-log-out"></span></a>';
 
 
