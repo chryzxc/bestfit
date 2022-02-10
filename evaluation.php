@@ -174,6 +174,8 @@
         </caption>
         <!--  <form> -->
 
+          <!--Questionnaire-->
+
 
         <!-- -->
         <h4 style="margin-top: 50px;">1. Learn computer software programs.</h4>
@@ -197,7 +199,7 @@
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q2">
+            <input type="radio" checked="checked" name="q2" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -205,12 +207,12 @@
         <h4>3. Learn statistics and accounting.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q3">
+            <input type="radio" checked="checked" name="q3" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q3">
+            <input type="radio" checked="checked" name="q3" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -219,12 +221,12 @@
         <h4>4. Cook unique dishes for other people.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q4">
+            <input type="radio" checked="checked" name="q4" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q4">
+            <input type="radio" checked="checked" name="q4" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -232,12 +234,12 @@
         <h4>5. Study ethics or philosophy.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q5">
+            <input type="radio" checked="checked" name="q5" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q5">
+            <input type="radio" checked="checked" name="q5" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -245,12 +247,12 @@
         <h4>6. Conduct experiments and make observations.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q6">
+            <input type="radio" checked="checked" name="q6" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q6">
+            <input type="radio" checked="checked" name="q6" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -259,12 +261,12 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q7">
+            <input type="radio" checked="checked" name="q7" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q7">
+            <input type="radio" checked="checked" name="q7" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -273,12 +275,12 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q8">
+            <input type="radio" checked="checked" name="q8" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q8">
+            <input type="radio" checked="checked" name="q8" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -287,12 +289,12 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q9">
+            <input type="radio" checked="checked" name="q9" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q9">
+            <input type="radio" checked="checked" name="q9" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -301,12 +303,12 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q10">
+            <input type="radio" checked="checked" name="q10" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q10">
+            <input type="radio" checked="checked" name="q10" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -314,12 +316,12 @@
         <h4>11. Learn another language.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q11">
+            <input type="radio" checked="checked" name="q11" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q11">
+            <input type="radio" checked="checked" name="q11" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -327,12 +329,12 @@
         <h4>12. Bake or design cakes.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q12">
+            <input type="radio" checked="checked" name="q12" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q12">
+            <input type="radio" checked="checked" name="q12" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -341,12 +343,12 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q13">
+            <input type="radio" checked="checked" name="q13" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q13">
+            <input type="radio" checked="checked" name="q13" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -356,12 +358,12 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q14">
+            <input type="radio" checked="checked" name="q14" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q14">
+            <input type="radio" checked="checked" name="q14" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -369,12 +371,12 @@
         <h4>15. Solve math problems</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q15">
+            <input type="radio" checked="checked" name="q15" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q15">
+            <input type="radio" checked="checked" name="q15" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -382,12 +384,12 @@
         <h4>16. Use math, science, and technology.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q16">
+            <input type="radio" checked="checked" name="q16" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q16">
+            <input type="radio" checked="checked" name="q16" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -396,12 +398,12 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q17">
+            <input type="radio" checked="checked" name="q17" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q17">
+            <input type="radio" checked="checked" name="q17" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -409,12 +411,12 @@
         <h4>18. Act, sing, dance, or work behind the scenes of a play.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q18">
+            <input type="radio" checked="checked" name="q18" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q18">
+            <input type="radio" checked="checked" name="q18" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -423,12 +425,12 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q19">
+            <input type="radio" checked="checked" name="q19" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q19">
+            <input type="radio" checked="checked" name="q19" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -436,12 +438,12 @@
         <h4>20. Paint, draw, or make sculptures.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q20">
+            <input type="radio" checked="checked" name="q20" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q20">
+            <input type="radio" checked="checked" name="q20" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -450,12 +452,12 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q21">
+            <input type="radio" checked="checked" name="q21" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q21">
+            <input type="radio" checked="checked" name="q21" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -464,12 +466,12 @@
         <h4>22.Use computer software to design art.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q22">
+            <input type="radio" checked="checked" name="q22" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q22">
+            <input type="radio" checked="checked" name="q22" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -478,12 +480,12 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q23">
+            <input type="radio" checked="checked" name="q23" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q23">
+            <input type="radio" checked="checked" name="q23" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -491,12 +493,12 @@
         <h4>24. Innovate and design better products.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q24">
+            <input type="radio" checked="checked" name="q24" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q24">
+            <input type="radio" checked="checked" name="q24" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -504,16 +506,19 @@
         <h4>25. Learn the legal system.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q25">
+            <input type="radio" checked="checked" name="q25" value="">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q25">
+            <input type="radio" checked="checked" name="q25" value=null>
             <span class="checkmark"></span>
         </label>
 
-        <!-- Trigger/Open The Modal -->
+
+        <!-- End of questionnaire-->
+
+        <!-- Open hn Modal -->
         <button type="button" id="submitButton" style="border-radius: 5px; margin:4px;">Submit</button>
 
         <div id="myModal" class="modal">
@@ -554,16 +559,11 @@
                 });
             });
 
-            // Get the modal
             var modal = document.getElementById("myModal");
-
-            // Get the button that opens the modal
             var btn = document.getElementById("submitButton");
-
-            // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
 
-            // When the user clicks the button, open the modal 
+
             btn.onclick = function() {
                 modal.style.display = "block";
 
@@ -592,14 +592,12 @@
             }
 
 
-
-            // When the user clicks on <span> (x), close the modal
             span.onclick = function() {
                 modal.style.display = "none";
                 window.location.href = "index.php";
             }
 
-            // When the user clicks anywhere outside of the modal, close it
+          
             window.onclick = function(event) {
                 if (event.target == modal) {
                    // modal.style.display = "none";
