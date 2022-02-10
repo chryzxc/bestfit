@@ -174,14 +174,14 @@
         </caption>
         <!--  <form> -->
 
-          <!--Questionnaire-->
+        <!--Questionnaire-->
 
 
         <!-- -->
         <h4 style="margin-top: 50px;">1. Learn computer software programs.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q1" value="naturalsciences">
+            <input id="choice" type="radio" checked="checked" name="q1" value="mathematics">
             <span class="checkmark"></span>
         </label>
 
@@ -194,7 +194,7 @@
         <h4>2. Critique art, music, or performances.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q2" value="">
+            <input id="choice" type="radio" checked="checked" name="q2" value="music">
             <span class="checkmark"></span>
         </label>
 
@@ -207,7 +207,7 @@
         <h4>3. Learn statistics and accounting.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q3" value="">
+            <input id="choice" type="radio" checked="checked" name="q3" value="mathematics">
             <span class="checkmark"></span>
         </label>
 
@@ -221,7 +221,7 @@
         <h4>4. Cook unique dishes for other people.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q4" value="">
+            <input id="choice" type="radio" checked="checked" name="q4" value="epp">
             <span class="checkmark"></span>
         </label>
 
@@ -234,7 +234,7 @@
         <h4>5. Study ethics or philosophy.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q5" value="">
+            <input id="choice" type="radio" checked="checked" name="q5" value="ap">
             <span class="checkmark"></span>
         </label>
 
@@ -247,12 +247,12 @@
         <h4>6. Conduct experiments and make observations.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q6" value="">
+            <input id="choice" type="radio" checked="checked" name="q6" value="science">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Not interested
-            <input type="radio" checked="checked" name="q6" value=null>
+            <input id="choice" type="radio" checked="checked" name="q6" value=null>
             <span class="checkmark"></span>
         </label>
 
@@ -261,7 +261,7 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q7" value="">
+            <input id="choice" type="radio" checked="checked" name="q7" value="science">
             <span class="checkmark"></span>
         </label>
 
@@ -275,7 +275,7 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q8" value="">
+            <input id="choice" type="radio" checked="checked" name="q8" value="science">
             <span class="checkmark"></span>
         </label>
 
@@ -289,7 +289,7 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q9" value="">
+            <input id="choice" type="radio" checked="checked" name="q9" value="science">
             <span class="checkmark"></span>
         </label>
 
@@ -303,7 +303,7 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q10" value="">
+            <input id="choice" type="radio" checked="checked" name="q10" value="esp">
             <span class="checkmark"></span>
         </label>
 
@@ -316,7 +316,7 @@
         <h4>11. Learn another language.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q11" value="">
+            <input id="choice" type="radio" checked="checked" name="q11" value="arts">
             <span class="checkmark"></span>
         </label>
 
@@ -329,7 +329,7 @@
         <h4>12. Bake or design cakes.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q12" value="">
+            <input id="choice" type="radio" checked="checked" name="q12" value="epp">
             <span class="checkmark"></span>
         </label>
 
@@ -343,7 +343,7 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q13" value="">
+            <input id="choice" type="radio" checked="checked" name="q13" value="">
             <span class="checkmark"></span>
         </label>
 
@@ -358,7 +358,7 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q14" value="">
+            <input id="choice" type="radio" checked="checked" name="q14" value="">
             <span class="checkmark"></span>
         </label>
 
@@ -371,7 +371,7 @@
         <h4>15. Solve math problems</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q15" value="">
+            <input id="choice" type="radio" checked="checked" name="q15" value="">
             <span class="checkmark"></span>
         </label>
 
@@ -384,7 +384,7 @@
         <h4>16. Use math, science, and technology.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q16" value="">
+            <input id="choice" type="radio" checked="checked" name="q16" value="">
             <span class="checkmark"></span>
         </label>
 
@@ -398,7 +398,7 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q17" value="">
+            <input id="choice" type="radio" checked="checked" name="q17" value="">
             <span class="checkmark"></span>
         </label>
 
@@ -411,7 +411,7 @@
         <h4>18. Act, sing, dance, or work behind the scenes of a play.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q18" value="">
+            <input id="choice" type="radio" checked="checked" name="q18" value="">
             <span class="checkmark"></span>
         </label>
 
@@ -425,7 +425,7 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q19" value="">
+            <input id="choice" type="radio" checked="checked" name="q19" value="">
             <span class="checkmark"></span>
         </label>
 
@@ -438,7 +438,7 @@
         <h4>20. Paint, draw, or make sculptures.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q20" value="">
+            <input id="choice" type="radio" checked="checked" name="q20" value="">
             <span class="checkmark"></span>
         </label>
 
@@ -452,7 +452,7 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q21" value="">
+            <input id="choice" type="radio" checked="checked" name="q21" value="">
             <span class="checkmark"></span>
         </label>
 
@@ -466,7 +466,7 @@
         <h4>22.Use computer software to design art.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q22" value="">
+            <input id="choice" type="radio" checked="checked" name="q22" value="">
             <span class="checkmark"></span>
         </label>
 
@@ -480,7 +480,7 @@
 
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q23" value="">
+            <input id="choice" type="radio" checked="checked" name="q23" value="">
             <span class="checkmark"></span>
         </label>
 
@@ -493,7 +493,7 @@
         <h4>24. Innovate and design better products.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q24" value="">
+            <input id="choice" type="radio" checked="checked" name="q24" value="">
             <span class="checkmark"></span>
         </label>
 
@@ -506,7 +506,7 @@
         <h4>25. Learn the legal system.</h4>
 
         <label class="container" style="padding-left: 30px;">Interested
-            <input type="radio" checked="checked" name="q25" value="">
+            <input id="choice" type="radio" checked="checked" name="q25" value="">
             <span class="checkmark"></span>
         </label>
 
@@ -567,20 +567,62 @@
             btn.onclick = function() {
                 modal.style.display = "block";
 
-                var languages = 0;
-                var literature = 0;
-                var communication = 0;
+                var filipino = 0;
+                var english = 0;
                 var mathematics = 0;
-                var philosopy = 0;
-                var naturalsciences = 0;
-                var socialsciences = 0;
+                var science = 0;
+                var ap = 0;
+                var esp = 0;
+                var music = 0;
+                var pe = 0;
+                var health = 0;
+                var epp = 0;
 
-                $.each($("input[name='q1']:checked"), function() {
+
+                $.each($("input[id='choice']:checked"), function() {
                     //    favorite.push($(this).val());
-                    if ($(this).val() == "naturalsciences") {
-                        socialsciences += 1;
+                    if ($(this).val() == "filipino") {
+                        filipino += 1;
                     }
-                    document.getElementById("result").textContent = "qwe" + socialsciences;
+                    if ($(this).val() == "english") {
+                        english += 1;
+                    }
+                    if ($(this).val() == "mathematics") {
+                        mathematics += 1;
+                    }
+                    if ($(this).val() == "science") {
+                        science += 1;
+                    }
+                    if ($(this).val() == "ap") {
+                        ap += 1;
+                    }
+                    if ($(this).val() == "esp") {
+                        esp += 1;
+                    }
+                    if ($(this).val() == "music") {
+                        music += 1;
+                    }
+                    if ($(this).val() == "pe") {
+                        pe += 1;
+                    }
+                    if ($(this).val() == "health") {
+                        health += 1;
+                    }
+                    if ($(this).val() == "epp") {
+                        epp += 1;
+                    }
+
+
+                    document.getElementById("result").textContent = "Filipino: " + filipino + "\n" +
+                        "English: " + english + "\n" +
+                        "Mathematics: " + mathematics + "\n" +
+                        "Science: " + science + "\n" +
+                        "Araling Panlipunan: " + ap + "\n" +
+                        "Esp: " + esp + "\n" +
+                        "Music: " + music + "\n" +
+                        "Pe: " + pe + "\n" +
+                        "Health: " + health + "\n" +
+                        "EPP: " + epp + "\n" ;
 
                 });
 
@@ -597,10 +639,10 @@
                 window.location.href = "index.php";
             }
 
-          
+
             window.onclick = function(event) {
                 if (event.target == modal) {
-                   // modal.style.display = "none";
+                    // modal.style.display = "none";
                 }
             }
         </script>

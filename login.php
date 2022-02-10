@@ -22,6 +22,8 @@ if (isset($_POST['btnlogin'])) {
             <?php
         
     } else {
+      if ($uname == $upass){
+
 		//it creates a new objects of member
         $user = new Student();
 		//make use of the static function, and we passed to parameters
@@ -44,7 +46,13 @@ if (isset($_POST['btnlogin'])) {
                 </script>
         <?php
         }
-        
+      }else{
+        ?>
+       <script type="text/javascript">
+                alert("Invalid Username and Password!");
+                </script> 
+                <?php
+      }
     }
 } else {
     
