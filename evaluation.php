@@ -1,7 +1,6 @@
 <?php require_once("includes/initialize.php");
 ?>
 <style>
-    /* Customize the label (the container) */
     .container {
         display: block;
         position: relative;
@@ -32,7 +31,7 @@
 
     }
 
-    /* Hide the browser's default radio button */
+
     .container input {
         position: absolute;
         opacity: 0;
@@ -41,7 +40,7 @@
         width: 0;
     }
 
-    /* Create a custom radio button */
+
     .checkmark {
 
         position: absolute;
@@ -54,29 +53,29 @@
 
     }
 
-    /* On mouse-over, add a grey background color */
+
     .container:hover input~.checkmark {
         background-color: #ccc;
     }
 
-    /* When the radio button is checked, add a background */
+
     .container input:checked~.checkmark {
         background-color: #fb7400;
     }
 
-    /* Create the indicator (the dot/circle - hidden when not checked) */
+
     .checkmark:after {
         content: "";
         position: absolute;
         display: none;
     }
 
-    /* Show the indicator (dot/circle) when checked */
+
     .container input:checked~.checkmark:after {
         display: block;
     }
 
-    /* Style the indicator (dot/circle) */
+
     .container .checkmark:after {
         top: 6px;
         left: 6px;
@@ -86,31 +85,23 @@
         background: white;
     }
 
-    /* The Modal (background) */
+
     .modal {
         display: none;
-        /* Hidden by default */
         position: fixed;
-        /* Stay in place */
         z-index: 1;
-        /* Sit on top */
-        padding-top: 100px;
-        /* Location of the box */
+        padding-top: 50px;
         left: 0;
         top: 0;
         width: 100%;
-        /* Full width */
         height: 100%;
-        /* Full height */
         overflow: auto;
-        /* Enable scroll if needed */
         background-color: rgb(0, 0, 0);
-        /* Fallback color */
         background-color: rgba(0, 0, 0, 0.4);
-        /* Black w/ opacity */
+
     }
 
-    /* Modal Content */
+    
     .modal-content {
         background-color: #fefefe;
         margin: auto;
@@ -119,7 +110,7 @@
         width: 100%;
     }
 
-    /* The Close Button */
+    
     .close {
         color: #aaaaaa;
         float: right;
@@ -186,27 +177,27 @@
         <h3 style="margin-top: 50px; ">1. What subject interests you?</h3>
 
         <label class="container" style="padding-left: 30px;">Music, Arts, Physical Education, and Health
-            <input id="choice" type="radio" name="q1" value="SportsArts">
+            <input id="choice" type="checkbox" name="q1" value="SportsArts">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; ">Mathematics (Business)
-            <input id="choice" type="radio" name="q1" value="Business">
+            <input id="choice" type="checkbox" name="q1" value="Business">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; ">Contemporary Issues
-            <input id="choice" type="radio" name="q1" value="HUMMS">
+            <input id="choice" type="checkbox" name="q1" value="HUMMS">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; ">Biology
-            <input id="choice" type="radio" name="q1" value="Science">
+            <input id="choice" type="checkbox" name="q1" value="Science">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">ICT
-            <input id="choice" type="radio" name="q1" value="Technical-Vocational-Livelihood">
+            <input id="choice" type="checkbox" name="q1" value="Technical-Vocational-Livelihood">
             <span class="checkmark"></span>
         </label>
 
@@ -214,27 +205,27 @@
         <h3>2. An activity that you like the most</h3>
 
         <label class="container" style="padding-left: 30px;">Solving Math Problems
-            <input id="choice" type="radio" name="q2" value="STEM">
+            <input id="choice" type="checkbox" name="q2" value="STEM">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Composing Music
-            <input id="choice" type="radio" name="q2" value="Arts">
+            <input id="choice" type="checkbox" name="q2" value="Arts">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Reading about Philosophy
-            <input id="choice" type="radio" name="q2" value="HumanitiesAndSocialSciences">
+            <input id="choice" type="checkbox" name="q2" value="HumanitiesAndSocialSciences">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Making Crafts
-            <input id="choice" type="radio" name="q2" value="Arts">
+            <input id="choice" type="checkbox" name="q2" value="Arts">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Studying financial management, business management, corporate operations
-            <input id="choice" type="radio" name="q2" value="ABM">
+            <input id="choice" type="checkbox" name="q2" value="ABM">
             <span class="checkmark"></span>
         </label>
 
@@ -242,32 +233,32 @@
         <h3>3. A working environment that you dream of</h3>
 
         <label class="container" style="padding-left: 30px;">Data -Driven Environment
-            <input id="choice" type="radio" name="q3" value="STEM">
+            <input id="choice" type="checkbox" name="q3" value="STEM">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Creative Environment
-            <input id="choice" type="radio" name="q3" value="Arts">
+            <input id="choice" type="checkbox" name="q3" value="Arts">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">An Environment of Different Cultures
-            <input id="choice" type="radio" name="q3" value="HUMMS">
+            <input id="choice" type="checkbox" name="q3" value="HUMMS">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">An Environment With a Mix of Everything
-            <input id="choice" type="radio" name="q3" value="Technical-Vocational-Livelihood">
+            <input id="choice" type="checkbox" name="q3" value="Technical-Vocational-Livelihood">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Investigative Environment
-            <input id="choice" type="radio" name="q3" value="Technical-Vocational-Livelihood">
+            <input id="choice" type="checkbox" name="q3" value="Technical-Vocational-Livelihood">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Crafty Environment
-            <input id="choice" type="radio" name="q3" value="Arts">
+            <input id="choice" type="checkbox" name="q3" value="Arts">
             <span class="checkmark"></span>
         </label>
 
@@ -276,27 +267,27 @@
         <h3>4. What's your mantra?</h3>
 
         <label class="container" style="padding-left: 30px;">"Every problem will be healed with the touch of a melody"
-            <input id="choice" type="radio" name="q4" value="Arts">
+            <input id="choice" type="checkbox" name="q4" value="Arts">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">"Of course we can fix it"
-            <input id="choice" type="radio" name="q4" value="Technology">
+            <input id="choice" type="checkbox" name="q4" value="Technology">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">"The biggest risk is not taking any"
-            <input id="choice" type="radio" name="q4" value="Management">
+            <input id="choice" type="checkbox" name="q4" value="Management">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">"Live with a system, calculate your actions"
-            <input id="choice" type="radio" name="q4" value="Engineering">
+            <input id="choice" type="checkbox" name="q4" value="Engineering">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">"There is always a wide range of options to choose from"
-            <input id="choice" type="radio" name="q4" value="STEM">
+            <input id="choice" type="checkbox" name="q4" value="STEM">
             <span class="checkmark"></span>
         </label>
 
@@ -304,33 +295,33 @@
         <h3>5. Things you do during your free time</h3>
 
         <label class="container" style="padding-left: 30px;">Solving puzzles
-            <input id="choice" type="radio" name="q5" value="EngineeringMathematics">
+            <input id="choice" type="checkbox" name="q5" value="EngineeringMathematics">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Selling Things Online
-            <input id="choice" type="radio" name="q5" value="Business">
+            <input id="choice" type="checkbox" name="q5" value="Business">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Playing Musical Instruments
-            <input id="choice" type="radio" name="q5" value="Arts">
+            <input id="choice" type="checkbox" name="q5" value="Arts">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Fixing Things and Organizing My Stuff
-            <input id="choice" type="radio" name="q5" value="TechnologyEngineering">
+            <input id="choice" type="checkbox" name="q5" value="TechnologyEngineering">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; ">Trying Cool Science Experiments
-            <input id="choice" type="radio" name="q5" value="Science">
+            <input id="choice" type="checkbox" name="q5" value="Science">
             <span class="checkmark"></span>
         </label>
 
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Reading Books about human behaviour
-            <input id="choice" type="radio" name="q5" value="SocialSciences">
+            <input id="choice" type="checkbox" name="q5" value="SocialSciences">
             <span class="checkmark"></span>
         </label>
 
@@ -338,32 +329,32 @@
         <h3>6. When you encounter a problem, you usually</h3>
 
         <label class="container" style="padding-left: 30px;">Analyze informations before making a move
-            <input id="choice" type="radio" name="q6" value="STEM">
+            <input id="choice" type="checkbox" name="q6" value="STEM">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Consider various opinions from other people
-            <input id="choice" type="radio" name="q6" value="HUMMS">
+            <input id="choice" type="checkbox" name="q6" value="HUMMS">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Stick to proven ways to solve the problem
-            <input id="choice" type="radio" name="q6" value="STEM">
+            <input id="choice" type="checkbox" name="q6" value="STEM">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Worry about how a certain action affects another person
-            <input id="choice" type="radio" name="q6" value="Humanities">
+            <input id="choice" type="checkbox" name="q6" value="Humanities">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Think outside the box
-            <input id="choice" type="radio" name="q6" value="STEM">
+            <input id="choice" type="checkbox" name="q6" value="STEM">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Plan logically
-            <input id="choice" type="radio" name="q6" value="STEM">
+            <input id="choice" type="checkbox" name="q6" value="STEM">
             <span class="checkmark"></span>
         </label>
 
@@ -372,32 +363,32 @@
 
 
         <label class="container" style="padding-left: 30px;">Creative
-            <input id="choice" type="radio" name="q7" value="Arts">
+            <input id="choice" type="checkbox" name="q7" value="Arts">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Resourceful
-            <input id="choice" type="radio" name="q7" value="HUMMS">
+            <input id="choice" type="checkbox" name="q7" value="HUMMS">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Analytical
-            <input id="choice" type="radio" name="q7" value="STEM">
+            <input id="choice" type="checkbox" name="q7" value="STEM">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Philosophical
-            <input id="choice" type="radio" name="q7" value="HUMMS">
+            <input id="choice" type="checkbox" name="q7" value="HUMMS">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px;">Collaborative
-            <input id="choice" type="radio" name="q7" value="STEM">
+            <input id="choice" type="checkbox" name="q7" value="STEM">
             <span class="checkmark"></span>
         </label>
 
         <label class="container" style="padding-left: 30px; margin-bottom: 40px">Practical
-            <input id="choice" type="radio" name="q7" value="ABM">
+            <input id="choice" type="checkbox" name="q7" value="ABM">
             <span class="checkmark"></span>
         </label>
 
@@ -413,11 +404,11 @@
 
             <!-- Modal content -->
             <div class="modal-content" style="width: 50%">
-                <span class="close" style="text-align: right;">&times;</span>
+                <span class="close" style="text-align: right; visibility: hidden">&times;</span>
 
-                <h4 class="line-bottom" style="margin-top: 20px;"><b>Result</b></h4>
-                <h3 id="result" style="margin-top: 5px; text-align:center; margin-bottom:20px;">You are fit</h3>
-                <p id="resultDescription" style="text-align:center; margin-bottom:30px;"></p>
+                <h3 class="line-bottom" style="margin-top: 20px; "><b>Result</b></h3>
+                <label id="result" style="margin-top: 5px; text-align:center; margin-bottom:20px; font-weight: bold;">Empty</label>
+                <p id="resultDescription" style="text-align:center; margin-bottom:30px;">Please fill your desired choice</p>
                 <div style="text-align: center">
                     <a href="index.php" class="btn btn-primary px-5" style="padding-top: 15px; width:30% ;margin-top:20px">OKAY<span class="fa fa-log-out"></span></a>
                 </div>
@@ -487,7 +478,7 @@
                     if ($(this).val() == "HUMMS") {
 
                         AcademicHumanities += 1;
-                   
+
                         AcademicSocialSciences += 1;
 
 
@@ -532,7 +523,7 @@
                     }
 
                     if ($(this).val() == "Technology") {
-                        Technology += 1;
+                        AcademicTechnology += 1;
                     }
 
                     if ($(this).val() == "Engineering") {
@@ -577,44 +568,45 @@
                     const maxVal = Math.max(...Object.values(list))
                     const key = Object.keys(list).find(key => list[key] === maxVal)
 
-                    var selected;
-                    var selectedDescription;
+
+                    var selected = "Empty";
+                    var selectedDescription = "Please fill your desired choice";
 
                     if (key, maxVal == AcademicBusiness) {
 
-                        selected = "Academic-Business";
+                        selected = "Academic-Business (ABM)";
                         selectedDescription = "The Accountancy, Business and Management (ABM) strand would focus on the basic concepts of financial management, business management, corporate operations, and all things that are accounted for.";
 
                     } else if (key, maxVal == AcademicAccountancy) {
-                        selected = "Academic-Accountancy";
+                        selected = "Academic-Accountancy (ABM)";
                         selectedDescription = "The Accountancy, Business and Management (ABM) strand would focus on the basic concepts of financial management, business management, corporate operations, and all things that are accounted for.";
 
                     } else if (key, maxVal == AcademicManagement) {
-                        selected = "Academic-Management";
+                        selected = "Academic-Management (ABM)";
                         selectedDescription = "The Accountancy, Business and Management (ABM) strand would focus on the basic concepts of financial management, business management, corporate operations, and all things that are accounted for.";
 
                     } else if (key, maxVal == AcademicHumanities) {
-                        selected = "Academic-Humanities";
+                        selected = "Academic-Humanities (HUMMS)";
                         selectedDescription = "The HUMMS strand is designed for those who wonder what is on the other side of the wall. In other words, you are ready to take on the world and talk to a lot of people. This is for those who are considering taking up journalism, communication arts, liberal arts, education, and other social science-related courses in college.";
 
                     } else if (key, maxVal == AcademicSocialSciences) {
-                        selected = "Academic-SocialSciences";
+                        selected = "Academic-SocialSciences (HUMMS)";
                         selectedDescription = "The HUMMS strand is designed for those who wonder what is on the other side of the wall. In other words, you are ready to take on the world and talk to a lot of people. This is for those who are considering taking up journalism, communication arts, liberal arts, education, and other social science-related courses in college.";
 
                     } else if (key, maxVal == AcademicScience) {
-                        selected = "Academic-Science";
+                        selected = "Academic-Science (STEM)";
                         selectedDescription = "The STEM Strand is for students who are inclined toward or have the aptitude for Math or Science or Engineering studies. Science, Technology, Engineering, and Mathematics are intertwining disciplines when applied in the real world.";
 
                     } else if (key, maxVal == AcademicTechnology) {
-                        selected = "Academic-Technology";
+                        selected = "Academic-Technology (STEM)";
                         selectedDescription = "The STEM Strand is for students who are inclined toward or have the aptitude for Math or Science or Engineering studies. Science, Technology, Engineering, and Mathematics are intertwining disciplines when applied in the real world.";
 
                     } else if (key, maxVal == AcademicEngineering) {
-                        selected = "Academic-Engineering";
+                        selected = "Academic-Engineering (STEM)";
                         selectedDescription = "The STEM Strand is for students who are inclined toward or have the aptitude for Math or Science or Engineering studies. Science, Technology, Engineering, and Mathematics are intertwining disciplines when applied in the real world.";
 
                     } else if (key, maxVal == AcademicMathematics) {
-                        selected = "Academic-Mathematics";
+                        selected = "Academic-Mathematics (STEM)";
                         selectedDescription = "The STEM Strand is for students who are inclined toward or have the aptitude for Math or Science or Engineering studies. Science, Technology, Engineering, and Mathematics are intertwining disciplines when applied in the real world.";
 
                     } else if (key, maxVal == TechnicalVocationalLivelihood) {
@@ -634,7 +626,7 @@
                     var newline = "\r\n";
                     var nbsp = "\u00a0";
 
-                    document.getElementById("result").textContent = "You are fit in " + selected ;
+                    document.getElementById("result").textContent = "You are perfectly fit in " + selected;
                     document.getElementById("resultDescription").textContent = selectedDescription;
 
 
@@ -652,7 +644,7 @@
 
             span.onclick = function() {
                 modal.style.display = "none";
-                //  window.location.href = "index.php";
+                window.location.href = "index.php";
             }
 
 
