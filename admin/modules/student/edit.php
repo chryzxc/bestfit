@@ -184,7 +184,7 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 
 
 
-<!-- FOR COURSE -->
+<!-- FOR COURSE 
 <br>
     <fieldset>
       <legend>Course Offer</legend>
@@ -195,9 +195,12 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 <div class="form-group">
 <label>1st Course<span class="symbol required"></span></label>
 <select class="form-control" name="course_one" value="<?php echo $cur->COURSE_ONE; ?>">
-<?php while($row1 = mysqli_fetch_array($resultcourseone)):;?>
-<option><?php echo $row1['COURSE_NAME'];?></option>
-<?php endwhile;?>
+<?php 
+//while($row1 = mysqli_fetch_array($resultcourseone)):;?>
+<option><?php 
+//echo $row1['COURSE_NAME'];?></option>
+<?php
+// endwhile;?>
 </select>
 </div>
 </div> 
@@ -206,9 +209,12 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 <div class="form-group">
 <label>2nd Course<span class="symbol required"></span></label>
 <select class="form-control" name="course_two" value="<?php echo $COURSE_NAME; ?>">
-<?php while($row2 = mysqli_fetch_array($resultcoursetwo)):;?>
-<option><?php echo $row2['COURSE_NAME'];?></option>
-<?php endwhile;?>
+<?php 
+//while($row2 = mysqli_fetch_array($resultcoursetwo)):;?>
+<option><?php 
+//echo $row2['COURSE_NAME'];?></option>
+<?php 
+//endwhile;?>
 </select>
 </div>
 </div> 
@@ -217,9 +223,12 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 <div class="form-group">
 <label>3rd Course<span class="symbol required"></span></label>
 <select class="form-control" name="course_three" value="<?php echo $COURSE_NAME; ?>">
-<?php while($row3 = mysqli_fetch_array($resultcoursethree)):;?>
-<option><?php echo $row3['COURSE_NAME'];?></option>
-<?php endwhile;?>
+<?php 
+//while($row3 = mysqli_fetch_array($resultcoursethree)):;?>
+<option><?php
+// echo $row3['COURSE_NAME'];?></option>
+<?php 
+//endwhile;?>
 </select>
 </div>
 </div> 
@@ -234,6 +243,7 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 
 <BR>
 
+-->
 
 
 
@@ -250,11 +260,10 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 
 
 
-
-
+<!-- 
 				<?php
-				$details = new Student_details();
-				$det = $details->secondary_details($_GET['id']);
+		//		$details = new Student_details();
+		//		$det = $details->secondary_details($_GET['id']);
 				?>
 				<fieldset>
 				<legend>Secondary Details</legend>
@@ -265,7 +274,8 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 		                <label for=
 		                "father">Father </label> 
 			                 <input class="form-control input-sm" id="father" name="father" type=
-		                  "text" placeholder="Father" value="<?php echo $det->FATHER; ?>">
+		                  "text" placeholder="Father" value="<?php
+						  // echo $det->FATHER; ?>">
 		                </div>
 		              </div>
 
@@ -286,7 +296,8 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 		                <label for=
 		                "mother">Mother </label> 
 			                 <input class="form-control input-sm" id="mother" name="mother" type=
-		                  "text" placeholder="Mother" value="<?php echo $det->MOTHER; ?>">
+		                  "text" placeholder="Mother" value="<?php 
+						  //echo $det->MOTHER; ?>">
 		                </div>
 		              </div>
 
@@ -312,7 +323,8 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
                         	   </div>
 			                  <div class="">
                           		 <label><input checked id="boarding" name="boarding" type=
-                          "radio" value="No" <?php echo ($det->BOARDING=='No')? 'checked ="checked"':''; ?>>No</label>
+                          "radio" value="No" <?php 
+						  //echo ($det->BOARDING=='No')? 'checked ="checked"':''; ?>>No</label>
                         	   </div>
 
 							
@@ -344,7 +356,8 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 		                <label for=
 		                "guardian">Guardian </label> 
 			                 <input class="form-control input-sm" id="guardian" name="guardian" type=
-		                  "text" placeholder="Guardian" value="<?php echo $det->GUARDIAN; ?>">
+		                  "text" placeholder="Guardian" value="<?php
+						  // echo $det->GUARDIAN; ?>">
 		                </div>
 		              </div>
 
@@ -367,7 +380,8 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 		                <label  for=
 		                "otherperson">Other person Supporting </label> 
 			                 <input class="form-control input-sm" id="otherperson" name="otherperson" type=
-		                  "text" placeholder="Other Person Supporting" value="<?php echo $det->OTHER_PERSON_SUPPORT; ?>">
+		                  "text" placeholder="Other Person Supporting" value="<?php 
+						  //echo $det->OTHER_PERSON_SUPPORT; ?>">
 		                </div>
 		              </div>
 
@@ -383,10 +397,12 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 		          </div>
 		          
 				</fieldset>	
-				<?php
-				$req = new Requirements();
-				$res = $req->single_result($_GET['id']);
-				?>
+				//
+			//	<?php
+			//	$req = new Requirements();
+			//	$res = $req->single_result($_GET['id']);
+			//	?>
+			//
 				<fieldset>
 					<legend>Other Details</legend>
 					<div class="form-group">
@@ -399,9 +415,9 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 			                 <div class="checkbox">
 							    <label>
 							      <input type="checkbox" name="nso" value="yes" <?php 
-							      if ($res->NSO=='Yes'){
-							       echo 'checked ="checked"';
-							   	   };
+							   //   if ($res->NSO=='Yes'){
+							   //    echo 'checked ="checked"';
+							   //	   };
 							   	   ?>/> NSO
 							    </label>
 							    
@@ -409,9 +425,9 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 							  <div class="checkbox">
 							    <label>
 							      <input type="checkbox" name="baptismal" value="yes" <?php 
-							      if ($res->BAPTISMAL=='Yes'){
-							       echo 'checked ="checked"';
-							   	   };
+							   //   if ($res->BAPTISMAL=='Yes'){
+							   //    echo 'checked ="checked"';
+							   //	   };
 							   	   ?>/> Baptismal
 							    </label>
 							    
@@ -420,19 +436,19 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 							  <div class="checkbox">
 							    <label>
 							      <input type="checkbox" name="entrance" value="yes" <?php 
-							      if ($res->ENTRANCE_TEST_RESULT=='Yes'){
-							       echo 'checked ="checked"';
-							   	   };
+							   //   if ($res->ENTRANCE_TEST_RESULT=='Yes'){
+							   //    echo 'checked ="checked"';
+							   //	   };
 							   	   ?>/> Entrance Test Result
 							    </label>
 							    
 							  </div>
 							   <div class="checkbox">
-							   <!--  <label>
+							  <label>
 							      <input type="checkbox" name="mir_contract" value="yes" <?php 
-							      if ($res->MARRIAGE_CONTRACT=='Yes'){
-							       echo 'checked ="checked"';
-							   	   };
+							 //     if ($res->MARRIAGE_CONTRACT=='Yes'){
+							 //      echo 'checked ="checked"';
+							 //  	   };
 							   	   ?>/> Marriage Contract
 							    </label> -->
 							    
@@ -440,18 +456,18 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 							  <!--  <div class="checkbox">
 							    <label>
 							      <input type="checkbox" name="certifcateOfTransfer" value="yes" <?php 
-							      if ($res->CERTIFICATE_OF_TRANSFER=='Yes'){
-							       echo 'checked ="checked"';
-							   	   };
+							//      if ($res->CERTIFICATE_OF_TRANSFER=='Yes'){
+							//       echo 'checked ="checked"';
+							//   	   };
 							   	   ?>/> Certificate of Transfer
 							    </label>
 							    
-							  </div> -->
+							  </div> 
 
 		                </div>
 		              </div>
 
-		              </div>
+		              </div> -->
 
 
 		          </div>

@@ -290,7 +290,7 @@ if (isset($_POST['btnlogin'])) {
 
 
 
-
+<!-- 
 
             <fieldset>
               <legend>Secondary Details</legend>
@@ -431,7 +431,7 @@ if (isset($_POST['btnlogin'])) {
             <input class="form-control input-sm" id="course_one" name="course_one" placeholder="" type="text" hidden>
             <input class="form-control input-sm" id="course_two" name="course_two" placeholder="" type="text" hidden>
             <input class="form-control input-sm" id="course_three" name="course_three" placeholder="" type="text" hidden>
-            <br>
+            <br> -->
 
             <div class="form-group">
               <div class="row">

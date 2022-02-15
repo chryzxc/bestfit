@@ -104,9 +104,12 @@ function loadresult1()
         for($x = 0; $x < count($arrayStrands) ; $x ++){
 
           if(strpos($arraySubjects[$x], $result1->SUBJ_DESCRIPTION) !== false){
-          
-            array_push($arrayRecommendation,$arrayStrands[$x]);
+
+			if (!in_array($arrayStrands[$x], $arrayRecommendation))
+			{
+				array_push($arrayRecommendation,$arrayStrands[$x]);
          
+			}
           
         } 
 
