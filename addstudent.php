@@ -275,7 +275,7 @@ if (isset($_POST['btnlogin'])) {
                 <div class="form-group">
                   <label>Attachment Image:</label>
                 </div>
-                <input type="file" name="personImage" value="" id="personImage"/>
+                <input type="file" name="personImage" value="" id="personImage" />
 
               </div>
             </div>
@@ -290,7 +290,7 @@ if (isset($_POST['btnlogin'])) {
 
 
 
-<!-- 
+            <!-- 
 
             <fieldset>
               <legend>Secondary Details</legend>

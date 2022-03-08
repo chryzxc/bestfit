@@ -106,15 +106,41 @@ $RELIGION = $_POST['religion'];
 $CONTACT_NO = $_POST['contact'];
 $HOME_ADD = $_POST['home'];
 $EMAIL   = $_POST['email'];
+
 // PARA COURSE OFFERED
-$COURSE_ONE   = $_POST['course_one'];
-$COURSE_TWO   = $_POST['course_two'];
-$COURSE_THREE   = $_POST['course_three'];
+//$COURSE_ONE   = $_POST['course_one'];
+//$COURSE_TWO   = $_POST['course_two'];
+//$COURSE_THREE   = $_POST['course_three'];
 
 
 // upload the image
   // $filename = UploadImage("personImage");
   // $personImage = "files/". $filename ;
+
+   $filename = $_FILES["personImage"]["name"];
+//   $tempname = $_FILES["personImage"]["tmp_name"];
+//   $folder = "image/" . $filename;
+
+
+
+if(!empty($_FILES["personImage"]["name"])) { 
+
+  $fileName = basename($_FILES["personImage"]["name"]); 
+  $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
+   
+  
+  $allowTypes = array('jpg','png','jpeg','gif'); 
+  if(in_array($fileType, $allowTypes)){ 
+	  $image = $_FILES['personImage']['tmp_name']; 
+	  $imgContent = addslashes(file_get_contents($image)); 
+   
+	  
+  }else{ 
+  //	$statusMsg = 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.'; 
+  } 
+}else{ 
+//	$statusMsg = 'Please select an image file to upload.'; 
+} 
 
 
 
@@ -136,13 +162,13 @@ $student->HOME_ADD			=	$HOME_ADD;
 $student->EMAIL 			=	$EMAIL;
 
 // PARA COURSE OFFERED
-$student->COURSE_ONE 			=	$COURSE_ONE;
-$student->COURSE_TWO 			=	$COURSE_TWO;
-$student->COURSE_THREE 			=	$COURSE_THREE;
+//$student->COURSE_ONE 			=	$COURSE_ONE;
+//$student->COURSE_TWO 			=	$COURSE_TWO;
+//$student->COURSE_THREE 			=	$COURSE_THREE;
 
 //upload image
 // $student->attachment_file 		=	$personImage;
-
+$student->attachment_file 		=	$imgContent;
 
 
 
@@ -162,28 +188,28 @@ $sy->IDNO 		= $IDNO;*/
 
 */  
 //secondary Details
-$FATHER 			= $_POST['father'];
-$FATHER_OCCU 		= $_POST['fOccu'];
-$MOTHER 			= $_POST['mother'];
-$MOTHER_OCCU 		= $_POST['mOccu'];
-$BOARDING 			= $_POST['boarding'];
-$WITH_FAMILY 		= $_POST['withfamily'];
-$GUARDIAN 			=  $_POST['guardian'];
-$GUARDIAN_ADDRESS 	=  $_POST['guardianAdd'];
-$OTHER_PERSON_SUPPORT = $_POST['otherperson'];
-$ADDRESS 			=  $_POST['otherAddress'];
+//$FATHER 			= $_POST['father'];
+//$FATHER_OCCU 		= $_POST['fOccu'];
+//$MOTHER 			= $_POST['mother'];
+//$MOTHER_OCCU 		= $_POST['mOccu'];
+// $BOARDING 			= $_POST['boarding'];
+// $WITH_FAMILY 		= $_POST['withfamily'];
+// $GUARDIAN 			=  $_POST['guardian'];
+// $GUARDIAN_ADDRESS 	=  $_POST['guardianAdd'];
+// $OTHER_PERSON_SUPPORT = $_POST['otherperson'];
+// $ADDRESS 			=  $_POST['otherAddress'];
 
 $studdetails = new Student_details();
-$studdetails->FATHER				=	$FATHER;
-$studdetails->FATHER_OCCU			=	$FATHER_OCCU;
-$studdetails->MOTHER				=	$MOTHER;
-$studdetails->MOTHER_OCCU			=	$MOTHER_OCCU;
-$studdetails->BOARDING			    =	$BOARDING;
-$studdetails->WITH_FAMILY			=	$WITH_FAMILY;
-$studdetails->GUARDIAN			    =	$GUARDIAN;
-$studdetails->GUARDIAN_ADDRESS		=	$GUARDIAN_ADDRESS;
-$studdetails->OTHER_PERSON_SUPPORT	=	$OTHER_PERSON_SUPPORT;
-$studdetails->ADDRESS				=	$ADDRESS;
+// $studdetails->FATHER				=	$FATHER;
+// $studdetails->FATHER_OCCU			=	$FATHER_OCCU;
+// $studdetails->MOTHER				=	$MOTHER;
+// $studdetails->MOTHER_OCCU			=	$MOTHER_OCCU;
+// $studdetails->BOARDING			    =	$BOARDING;
+// $studdetails->WITH_FAMILY			=	$WITH_FAMILY;
+// $studdetails->GUARDIAN			    =	$GUARDIAN;
+// $studdetails->GUARDIAN_ADDRESS		=	$GUARDIAN_ADDRESS;
+// $studdetails->OTHER_PERSON_SUPPORT	=	$OTHER_PERSON_SUPPORT;
+// $studdetails->ADDRESS				=	$ADDRESS;
 $studdetails->IDNO 				    =	$IDNO;
 
 //  

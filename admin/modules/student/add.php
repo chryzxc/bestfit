@@ -6,20 +6,20 @@ if (mysqli_connect_errno()) {
 }
 
 
-//query para han CONNECTION COURSE 1
-$querycourseone = "SELECT COURSE_NAME FROM courseforshs
-";
-$resultcourseone = mysqli_query($connections, $querycourseone);
+// //query para han CONNECTION COURSE 1
+// $querycourseone = "SELECT COURSE_NAME FROM courseforshs
+// ";
+// $resultcourseone = mysqli_query($connections, $querycourseone);
 
-//query para han CONNECTION COURSE 2
-$querycoursetwo = "SELECT COURSE_NAME FROM courseforshs
-";
-$resultcoursetwo = mysqli_query($connections, $querycoursetwo);
+// //query para han CONNECTION COURSE 2
+// $querycoursetwo = "SELECT COURSE_NAME FROM courseforshs
+// ";
+// $resultcoursetwo = mysqli_query($connections, $querycoursetwo);
 
-//query para han CONNECTION COURSE 3
-$querycoursethree = "SELECT COURSE_NAME FROM courseforshs
-";
-$resultcoursethree = mysqli_query($connections, $querycoursethree);
+// //query para han CONNECTION COURSE 3
+// $querycoursethree = "SELECT COURSE_NAME FROM courseforshs
+// ";
+// $resultcoursethree = mysqli_query($connections, $querycoursethree);
 
 ?>
 
@@ -29,7 +29,7 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
              <h5>Add New Student</h5>
            </div>
               <div class="card-body">
-                <form action="controller.php?action=add" class="form-horizontal  span9" method="post" autocomplete="off"> 
+                <form action="controller.php?action=add" class="form-horizontal  span9" method="post" autocomplete="off" enctype="multipart/form-data"> 
 
  
         <div class="row"> 
@@ -174,6 +174,16 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
           </div>
         </div> 
 
+        <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label>Attachment Image:</label>
+                </div>
+                <input type="file" name="personImage" value="" id="personImage"/>
+
+              </div>
+            </div>
+
 
 <!-- upload image hit student-->
 <!-- <div class="row">
@@ -192,7 +202,7 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 
 
 <!-- FOR COURSE -->
-<br>
+<!-- <br>
     <fieldset>
       <legend>Course Offer</legend>
         <label >Input by the Teacher</label> 
@@ -202,10 +212,10 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 <div class="col-md-4">
 <div class="form-group">
 <label>1st Course<span class="symbol required"></span></label>
-<select class="form-control" name="course_one" value="<?php echo $COURSE_NAME; ?>">
-<?php while($row1 = mysqli_fetch_array($resultcourseone)):;?>
-<option><?php echo $row1['COURSE_NAME'];?></option>
-<?php endwhile;?>
+<select class="form-control" name="course_one" value="<?php //echo $COURSE_NAME; ?>">
+<?php //while($row1 = mysqli_fetch_array($resultcourseone)):;?>
+<option><?php //echo $row1['COURSE_NAME'];?></option>
+<?php //endwhile;?>
 </select>
 </div>
 </div> 
@@ -213,10 +223,10 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 <div class="col-md-4">
 <div class="form-group">
 <label>2nd Course<span class="symbol required"></span></label>
-<select class="form-control" name="course_two" value="<?php echo $COURSE_NAME; ?>">
-<?php while($row2 = mysqli_fetch_array($resultcoursetwo)):;?>
-<option><?php echo $row2['COURSE_NAME'];?></option>
-<?php endwhile;?>
+<select class="form-control" name="course_two" value="<?php //echo $COURSE_NAME; ?>">
+<?php //while($row2 = mysqli_fetch_array($resultcoursetwo)):;?>
+<option><?php //echo $row2['COURSE_NAME'];?></option>
+<?php //endwhile;?>
 </select>
 </div>
 </div> 
@@ -224,10 +234,10 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
 <div class="col-md-4">
 <div class="form-group">
 <label>3rd Course<span class="symbol required"></span></label>
-<select class="form-control" name="course_three" value="<?php echo $COURSE_NAME; ?>">
-<?php while($row3 = mysqli_fetch_array($resultcoursethree)):;?>
-<option><?php echo $row3['COURSE_NAME'];?></option>
-<?php endwhile;?>
+<select class="form-control" name="course_three" value="<?php //echo $COURSE_NAME; ?>">
+<?php //while($row3 = mysqli_fetch_array($resultcoursethree)):;?>
+<option><?php //echo $row3['COURSE_NAME'];?></option>
+<?php //endwhile;?>
 </select>
 </div>
 </div> 
@@ -378,7 +388,7 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
                 Baptismal</label>
               </div>
 
-            <!--   <div class="checkbox">
+               <div class="checkbox">
                 <label><input name="entrance" type="checkbox" value="yes"> Entrance
                 Test Result</label>
               </div> -->
@@ -386,7 +396,7 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
             <!--   <div class="checkbox">
                 <label><input name="mir_contract" type="checkbox" value="yes">
                 Marriage Contract</label>
-              </div> -->
+              </div> 
 
               <div class="checkbox">
                 <label><input name="certifcateOfTransfer" type="checkbox" value=
@@ -397,7 +407,7 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
         </div>
       </div>
     </fieldset>
-
+-->
     <div class="form-group">
       <div class="row">
         <div class="col-md-6">
@@ -412,7 +422,7 @@ $resultcoursethree = mysqli_query($connections, $querycoursethree);
       </div>
     </div>
   </form>
-</div>
+</div> 
   <!--End of container-->
 
 </div><!--End of container-->
